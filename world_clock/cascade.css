@@ -1,5 +1,10 @@
 body {
-  background-color: blanchedalmond;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 54.2%,
+    rgb(21, 186, 196) 100.3%
+  );
 }
 
 h1 {
@@ -19,6 +24,7 @@ select {
   padding: 10px;
   border-radius: 5px;
   font-size: 18px;
+  color: #916450;
 }
 
 footer {
@@ -27,9 +33,17 @@ footer {
   color: rgba(0, 0, 0, 0.7);
 }
 
+img {
+  display: block;
+  width: 150px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 30px;
+}
+
 .world-container {
   max-width: 600px;
-  background: white;
+  background: lemonchiffon;
   margin: 60px auto;
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

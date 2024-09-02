@@ -20,6 +20,30 @@ function updateTime() {
     sydneyDate.innerHTML = sydneyCurrent.format("MMMM Do YYYY");
     sydneyTime.innerHTML = sydneyCurrent.format("h:mm:ss [<small>]A[</small>]");
   }
+
+  let continental = document.querySelector("#continental");
+  if (continental) {
+    let continentalDate = continental.querySelector(".date");
+    let continentalTime = continental.querySelector(".time");
+    let continentalCurrent = moment().tz("Chile/Continental");
+
+    continentalDate.innerHTML = continentalCurrent.format("MMMM Do YYYY");
+    continentalTime.innerHTML = continentalCurrent.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let saskatchewan = document.querySelector("#saskatchewan");
+  if (saskatchewan) {
+    let saskatchewanDate = saskatchewan.querySelector(".date");
+    let saskatchewanTime = saskatchewan.querySelector(".time");
+    let saskatchewanCurrent = moment().tz("Canada/Saskatchewan");
+
+    saskatchewanDate.innerHTML = saskatchewanCurrent.format("MMMM Do YYYY");
+    saskatchewanTime.innerHTML = saskatchewanCurrent.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 updateTime();
@@ -41,7 +65,7 @@ function updateCity(event) {
           <div class="time">${cityTime.format(
             "h:mm:ss"
           )}<small> ${cityTime.format("A")} </small></div>
-        </div>`;
+        </div> <a href="index.html"> All Cities </a>`;
 }
 
 let citiesSelect = document.querySelector("#city");
